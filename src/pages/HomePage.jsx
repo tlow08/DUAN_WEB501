@@ -96,7 +96,7 @@ function HomePage({ data }) {
                   </Link>
                   <div className="card-body">
                     <Link to={`/product-detail/${product.id}`}><h5 className="card-title">{product.title}</h5></Link>
-                    <p className="card-text">{product.description}</p>
+                    {/* <p className="card-text">{product.description}</p> */}
                     <p className="card-text">{product.price} $</p>
                   </div>
                   <button type="button" className="btn btn-danger">Add to Cart</button>
