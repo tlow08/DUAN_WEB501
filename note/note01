@@ -1,0 +1,26 @@
+
+
+ React.createElement(
+      "div",
+      {className: "wrap"},
+      React.createElement(
+        "ul",
+        {className: "nav"},
+        React.createElement(
+          "li",
+          null,
+          React.createElement("a",{href: "/"}, "home")
+        ),
+        React.createElement("li", null, "About"),
+        React.createElement("li", null, "About"),
+        React.createElement("li", null, "About"),
+      )
+    )
+
+// Props = properties
+    function Hello(props) {
+  if(props.gender === "female"){
+    return <h1>Hello co gai ten {props.userName}</h1>;
+  }
+}
+<!-- <Hello userName="Hoa" gender="female" /> -->
