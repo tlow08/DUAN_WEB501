@@ -26,11 +26,46 @@ a:hover {
   color: #535bf2;
 }
 header{
-  ul{
-    display: flex;
-    li{
-      margin-right: 30px;
-      font-size: 30px;
+  .top-h{
+    .top-h-d{
+      margin: 0 10px;
+      padding: 0;
+    }
+    .top-h-t{
+      input{
+        width: 300px;
+        border-bottom: 3px solid blue;
+        outline: none;
+        margin-right: 5px;
+      }
+      .top-h-e{
+        a{
+          font-size: 20px;
+          font-weight: 700;
+        }
+        
+      }
+      .top-h-e a:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .main-h{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    background-color:  #535bf2;
+    border-radius: 5px;
+    div{
+      margin: 10px;
+    }
+    a{
+      color: white;
+      font-size: 20px;
+    }
+    a:hover{
+      text-decoration: underline;
     }
   }
 
@@ -39,7 +74,7 @@ header{
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -94,4 +129,101 @@ h1 {
 }
 footer{
   text-align: center;
+  height: 50px;
+  background-color:  #535bf2;
+  color: white;
+  border-radius: 5px;
+  p{
+    padding: 10px;
+  }
+}
+
+.m-s{
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+}
+.menu{
+  width: 20%;
+  background-color:  #535bf2;
+  border-radius: 5px;
+  li{
+    margin: 5px 5px;
+    padding: 5px;
+    padding-left:20px;
+  }
+  a{
+    font-size: 18px;
+    color: white;
+  }
+  li:hover{
+    
+    background-color: white;
+    a{
+      color: #535bf2;
+    }
+  }
+}
+.slider{
+  width: 80%;
+}
+.tieu-de{
+  font-size: 26px;
+  font-weight: 600;
+}
+.tieu-de02{
+  font-size: 26px;
+  font-weight: 600;
+  color: #535bf2;
+}
+.card-img-top{
+  max-height: 120px;
+  width: 100%;
+}
+.card-title{
+  font-weight: 600;
+}
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+.dashboard-table th{
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  color: white;
+}
+.dashboard-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.dashboard-table th {
+  background-color: #535bf2;
+}
+
+.dashboard-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.dashboard-table tr:hover {
+  background-color: #ddd;
+}
+.dashboard-table td img{
+ max-width: 100px;
+  height: auto;
+}
+.dashboard-table td a{
+  font-weight: 600;
+  padding-left: 10px;
+}
+.tb-ad{
+  font-size: 30px;
+  color: red;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 18px;
 }

@@ -9,6 +9,9 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import LoginPage from "./pages/LoginPage";
 import instance from "./axios";
+import ProductDetail from "./pages/ProductDetail";
+import Dashboard from "./pages/admin/Dashboard";
+
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -43,8 +46,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage data={products} />} />
           <Route path="/home" element={<Navigate to="/" />} />
+          <Route path="/product-detail/:id" element={<ProductDetail />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin" element={<Dashboard data ={products} />} /> 
           <Route path="*" element={<NotFoundPages />} />
         </Routes>
       </main>

@@ -1,5 +1,5 @@
 function Footer() {
-  return <footer>Copyright-Tlow</footer>;
+  return <footer><p>Copyright - Tlow - @@@</p></footer>;
 }
 
 export default Footer;
