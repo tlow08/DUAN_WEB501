@@ -13,7 +13,7 @@ export default function Header() {
         <div className="top-h-t col d-flex justify-content-center">
           <form action="">
             <input type="text" placeholder="Nhập nội dung cần tìm ..." />
-            <button className="btn btn-primary">Tìm kiếm</button>
+            <button className="btn btn-primary"><i className="bi bi-search"></i></button>
           </form>
         </div>
         <div className="top-h-e col flex flex-row-reverse gap-3">
@@ -35,7 +35,7 @@ export default function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">Contact</Link>
             </li>
             <li>
               <Link to="/products">Shop</Link>
