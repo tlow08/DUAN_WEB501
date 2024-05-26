@@ -20,9 +20,9 @@ export default function Header() {
           <Link to="/login">
             <i className="bi bi-person-fill"></i>Tài khoản
           </Link>
-          <a href="">
+          <Link to="/giohang">
             <i className="bi bi-cart3"></i>Giỏ hàng
-          </a>
+          </Link>
         </div>
       </div>
       <div className="main-h row">
