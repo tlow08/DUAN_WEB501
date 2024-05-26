@@ -15,6 +15,7 @@ function Dashboard ({data}){
         <div className="flex gap-2">
         <button type="button" className="btn btn-warning">Thêm mới</button>
         <button type="button" className="btn btn-info">Chọn tất cả</button>
+        <button type="button" className="btn btn-success">Bỏ mục đã chọn</button>
         <button type="button" className="btn btn-danger">Xóa mục đã chọn</button>
         </div>
         <table className="dashboard-table">
