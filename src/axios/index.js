@@ -7,5 +7,12 @@ const instance = axios.create({
     "Content-Type": "application/json",
   },
 });
-
+export const getProducts = async() =>{
+  try{
+    const {data} = await instance.get("products");
+    return data;
+  }catch(error){
+    console.error("Error data:", error);
+  }
+};
 export default instance;
