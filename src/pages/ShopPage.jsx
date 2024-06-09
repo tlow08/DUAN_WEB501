@@ -23,9 +23,45 @@ const ShopPage = ({ data }) => {
             <Link>Canned coffee</Link>
           </li>
         </ul>
-        <button className="lg:hidden bg-yellow-600 text-white font-semibold p-2 text-xl m-2">
-          <i className="bi bi-list px-1 "></i>Category
-          </button>
+        <div className="lg:hidden mt-4">
+              <div className="btn-group">
+                <button
+                  className="btn btn-secondary dropdown-toggle bg-yellow-600 border-none hover:bg-yellow-700"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Category
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link className="dropdown-item" to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/shop">
+                      Shop
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/contact">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/about">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/admin">
+                      Admin
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
       </div>
       <div className="lg:col-span-3 lg:mt-8 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-8 p-4 ">
         {data.map((item) => (
