@@ -9,57 +9,47 @@ function Dashboard({ data, removeProduct }) {
   }
 
   return (
-    <div>
-      <p className="tb-ad">Trang quản trị</p>
-      <h1 className="tieu-de02">Danh sách sản phẩm</h1>
-      {/* {JSON.stringify(data)} */}
-      <Link to="/admin/users">Users</Link>
-      <div className="flex gap-2">
-        <Link to="/admin/product-add" className="btn btn-warning">
-          Thêm mới
-        </Link>
-        <button type="button" className="btn btn-info">
-          Chọn tất cả
-        </button>
-        <button type="button" className="btn btn-success">
-          Bỏ mục đã chọn
-        </button>
-        <button type="button" className="btn btn-danger">
-          Xóa mục đã chọn
-        </button>
+    <>
+    <section className="pt-16"></section>
+    <section>
+      <h1 className="text-center font-bold text-2xl text-red-600">Admin page</h1>
+      <div className="flex gap-3 text-xl">
+      <Link to="/admin" className="btn btn-info">List of products</Link>
+      <Link to="/admin/users" className="btn btn-success">List of Users</Link>
+      <Link to="/admin/product-add" className="btn btn-primary">
+        Add new product
+      </Link>
       </div>
-      <table className="dashboard-table">
-        <thead>
+      <h3 className="text-center text-xl font-semibold my-3">LIST OF PRODUCTS</h3>
+      <table className="table  w-full border table-striped">
+        <thead className="text-xl text-center ">
           <tr>
-            <th></th>
-            <th>Mã sản phẩm</th>
-            <th>Tên sản phẩm</th>
-            <th>Giá sản phẩm</th>
-            <th>Ảnh sản phẩm</th>
-            <th></th>
+            <th className="py-4">ID</th>
+            <th className="py-4">Products name</th>
+            <th className="py-4">Price</th>
+            <th className="py-4">Thumbnail</th>
+            <th className="py-4">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-center">
           {data.map((product) => (
             <tr key={product.id}>
-              <td>
-                <input type="checkbox" name="" id="" />
-              </td>
               <td>{product.id}</td>
               <td>{product.title}</td>
               <td>{product.price}$</td>
-              <td>
-                <img src={product.thumbnail} alt={product.title} />
+              <td className="flex justify-center items-center">
+                <img className="w-[70px] h-[70px]" src={product.thumbnail} alt={product.title} />
               </td>
               <td>
-                <Link to={`/admin/product-edit/${product.id}`}>Sửa</Link>
-                <button onClick={() => removeProduct(product.id)}>Xóa</button>
+                <Link className="btn btn-warning mx-4" to={`/admin/product-edit/${product.id}`}>Edit</Link>
+                <button className="btn btn-danger" onClick={() => removeProduct(product.id)}>Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
+    </>
   );
 }
 

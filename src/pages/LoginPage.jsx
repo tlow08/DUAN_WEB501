@@ -24,8 +24,9 @@ function LoginPage() {
     const onSubmit = (data) =>{
         (async () => {
             try{
-              await instance.post(`/login`, data);
-              if(confirm("Login successfully!")){
+              const result = await instance.post(`/login`, data);
+              localStorage.setItem("user", JSON.stringify(result.data));
+              if(confirm("Login successfully, do you want to return to the admin page?")){
                 nav("/admin");
               }
             }catch(error){
@@ -35,25 +36,30 @@ function LoginPage() {
         })();
     };
   return (
-    <div className='max-w-screen-sm m-auto'>
-     <form onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-center text-2xl font-bold">Login</h1>
-        <div className="form-group mb-3">
-            <label htmlFor="email" className="form-group">Email</label>
-            <input className="form-control" type="email" name="" id="email" {...register("email",{required: true})} />
+    <>
+    <section className="pt-16"></section>
+    <section className='container max-w-screen-sm m-auto pt-8 shadow-xl border rounded-xl'>
+     <form onSubmit={handleSubmit(onSubmit)} className="p-3">
+        <h1 className="text-center text-[40px] font-bold text-yellow-600">Login</h1>
+        <div className="w-full grid grid-cols-1">
+            <label htmlFor="email" className="my-2 text-xl font-semibold text-yellow-600 " >Email:</label>
+            <input type="email" name="" id="email" {...register("email",{required: true})} className="outline-none py-2 pl-3 border" />
             {errors.email?.message && <p className="text-danger">{errors.email?.message}</p>}
         </div>
-        <div className="form-group mb-3">
-            <label htmlFor="password" className="form-group">Password</label>
-            <input className="form-control" type="password" name="" id="password" {...register("password")} />
+        <div className="w-full grid grid-cols-1">
+            <label htmlFor="password"  className="my-2 text-xl font-semibold text-yellow-600 ">Password:</label>
+            <input className="outline-none py-2 pl-3 border"type="password" name="" id="password" {...register("password")} />
             {errors.password?.message && <p className="text-danger">{errors.password?.message}</p>}
         </div>
-        <div className="form-group mb-3">
-            <button type="submit" className='btn btn-primary w-100'>Login</button>
+        <div className="w-full my-3 bg-yellow-600 text-white font-semibold text-xl hover:bg-yellow-700">
+            <button type="submit" className='w-full text-center py-3'>Login</button>
         </div>
       </form>
+      <div className="text-center mb-4 text-base font-semibold hover:text-yellow-600">
       <Link to="/register">Register?</Link>
-    </div>
+      </div>
+    </section>
+    </>
   );
 }
 

@@ -1,12 +1,16 @@
-import React from 'react'
+// import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Users = ({data}) => {
     // console.log(data);
   return (
-    <div>
-      <h1 className='text-2xl font-bold'>Danh sach Users</h1>
-      <table className='table m-16'>
-        <thead>
+   <>
+    <section className="pt-16"></section>
+    <section>
+      <h1 className='text-2xl font-bold text-center'>List Of Users</h1>
+      <Link to="/admin" className='btn btn-warning my-8'>List of products</Link>
+      <table className='table table-striped'>
+        <thead className='text-xl text-center'>
           <th>Id</th>
           <th>Email</th>
           <th>Password</th>
@@ -21,7 +25,8 @@ const Users = ({data}) => {
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
+   </>
   )
 }
 
