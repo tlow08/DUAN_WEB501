@@ -5,10 +5,12 @@ export default function Header() {
     <header className="lg:fixed w-full z-50 bg-white">
       <section className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
         <div className="grid lg:grid-cols-4 md:grid-cols-1 md:text-center gap-8 my-4">
+          <Link to="/">
           <div className="flex justify-center items-center gap-2">
             <i className="bi bi-cup-hot-fill text-xl text-yellow-700"></i>
             <p className="text-xl font-semibold text-yellow-700">Low-Coffee</p>
           </div>
+          </Link>
           <div className="lg:col-span-2 flex justify-center items-center">
             <form action="" className="w-full flex">
               <div className="w-5/6 border border-yellow-400">

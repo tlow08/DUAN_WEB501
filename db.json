@@ -216,6 +216,11 @@
       "email": "tran44@gamil.com",
       "password": "$2a$10$0/zwGyuXRBEott/j62cxm.pe8esGZjtIA7n1izStPSN1ADmmwYMBq",
       "id": 7
+    },
+    {
+      "email": "trantailoi@gmail.com",
+      "password": "$2a$10$PFAQJ/YGP6ek3Mnk1NAfoOX9ndt6JEDTmW9Q9jWG6mDI1eCqzqgfC",
+      "id": 8
     }
   ]
 }

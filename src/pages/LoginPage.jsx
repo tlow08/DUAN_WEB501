@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 const schema = z.object({
   email: z.string().email(),
   password : z.string().min(6),
+  router: z.string().optional(),
 });
 
 function LoginPage() {
@@ -50,6 +51,11 @@ function LoginPage() {
             <label htmlFor="password"  className="my-2 text-xl font-semibold text-yellow-600 ">Password:</label>
             <input className="outline-none py-2 pl-3 border"type="password" name="" id="password" {...register("password")} />
             {errors.password?.message && <p className="text-danger">{errors.password?.message}</p>}
+        </div>
+        <div className="w-full grid grid-cols-1">
+            <label htmlFor="router"  className="my-2 text-xl font-semibold text-yellow-600 ">Router:</label>
+            <input className="outline-none py-2 pl-3 border"type="password" name="" id="router" {...register("router")} />
+            {errors.router?.message && <p className="text-danger">{errors.router?.message}</p>}
         </div>
         <div className="w-full my-3 bg-yellow-600 text-white font-semibold text-xl hover:bg-yellow-700">
             <button type="submit" className='w-full text-center py-3'>Login</button>
