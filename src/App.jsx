@@ -91,7 +91,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto lg:pt-[150px]">
+      <main className="container 2xl:max-w-screen-2xl  xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto lg:pt-[150px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<Navigate to="/" />} />

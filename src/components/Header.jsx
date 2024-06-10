@@ -11,18 +11,17 @@ export default function Header() {
             <p className="text-xl font-semibold text-yellow-700">Low-Coffee</p>
           </div>
           </Link>
-          <div className="lg:col-span-2 flex justify-center items-center">
-            <form action="" className="w-full flex">
+          <div className="lg:col-span-2 flex  ">
+            <form action="" className="w-full flex justify-center">
               <div className="w-5/6 border border-yellow-400">
-                {" "}
                 <input
                   className="w-full px-[12px] py-[6px] outline-none"
                   type="text"
                   placeholder="Enter search content ..."
                 />
               </div>
-              <div className="w-1/6">
-                <button className=" px-[12px] py-[6px] rounded bg-yellow-700 text-white">
+              <div className="w-1/6 text-left">
+                <button className=" px-[12px] py-[6px] rounded bg-yellow-600 hover:bg-yellow-700 text-white">
                   <i className="bi bi-search"></i>
                 </button>
               </div>
