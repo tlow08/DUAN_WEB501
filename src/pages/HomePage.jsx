@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <>
-      <section className="grid lg:grid-cols-4 md:grid-cols-1 gap-8">
+      <section className=" lg:grid-cols-4 md:grid-cols-1 gap-8">
         <div className="w-full hidden lg:block">
           <ul className="w-full p-4  text-gray-400 ">
             <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
@@ -69,7 +69,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="grid lg:grid-cols-3 md:grid-cols-1 gap-8 mt-16 ">
+      <section className=" container lg:max-w-screen-lg grid lg:grid-cols-3 md:grid-cols-1 gap-8 mt-16 ">
         <div className="grid grid-cols-3 justify-center items-center p-3 border rounded-lg shadow-md">
           <div>
             <img

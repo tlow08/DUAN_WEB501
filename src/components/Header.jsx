@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="lg:fixed w-full z-50 bg-white">
-      <section className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
+      <section className="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
         <div className="grid lg:grid-cols-4 md:grid-cols-1 md:text-center gap-8 my-4">
           <Link to="/">
           <div className="flex justify-center items-center gap-2">

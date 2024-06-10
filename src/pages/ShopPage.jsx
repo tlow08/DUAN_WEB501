@@ -7,7 +7,7 @@ const ShopPage = ({ data }) => {
     return <div>No data</div>;
   }
   return (
-    <section className="max-w-screen-2xl m-auto  grid lg:grid-cols-4 md:grid-cols-1 gap-8">
+    <section className="xl:max-w-screen-xl m-auto  grid grid-cols-4 lg:grid-cols-4 md:grid-cols-1 gap-8">
       <div>
         <ul className="w-full p-4  text-gray-400 hidden lg:table-cell">
           <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
@@ -63,7 +63,7 @@ const ShopPage = ({ data }) => {
               </div>
             </div>
       </div>
-      <div className="lg:col-span-3 lg:mt-8 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-8 p-4 ">
+      <div className="lg:col-span-3 lg:mt-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-8 p-4 ">
         {data.map((item) => (
           <div key={item.id} className="w-full">
             <div className="shadow-md rounded-xl border h-full">
