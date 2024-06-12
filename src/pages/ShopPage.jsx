@@ -7,23 +7,25 @@ const ShopPage = ({ data }) => {
     return <div>No data</div>;
   }
   return (
-    <section className="xl:max-w-screen-xl m-auto  grid grid-cols-4 lg:grid-cols-4 md:grid-cols-1 gap-8">
-      <div>
+    <section className="  grid  lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 gap-8">
+      <div >
         <ul className="w-full p-4  text-gray-400 hidden lg:table-cell">
-          <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
-            <Link>Traditional coffee</Link>
+          <li className="w-full text-xl font-semibold hover:text-yellow-700 ">
+            <Link className="w-full">Traditional coffee</Link>
           </li>
-          <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
+          <li className="pt-3 text-xl font-semibold hover:text-yellow-700 ">
             <Link>Vietnamese Coffee</Link>
           </li>
-          <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
+          <li className="pt-3 text-xl font-semibold hover:text-yellow-700 ">
             <Link>Instant coffee</Link>
           </li>
-          <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
+          <li className="pt-3 text-xl font-semibold hover:text-yellow-700 ">
             <Link>Canned coffee</Link>
           </li>
         </ul>
-        <div className="lg:hidden mt-4">
+     
+      </div>
+      <div className="lg:hidden mt-4 w-full ">
               <div className="btn-group">
                 <button
                   className="btn btn-secondary dropdown-toggle bg-yellow-600 border-none hover:bg-yellow-700"
@@ -61,9 +63,8 @@ const ShopPage = ({ data }) => {
                   </li>
                 </ul>
               </div>
-            </div>
-      </div>
-      <div className="lg:col-span-3 lg:mt-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-8 p-4 ">
+        </div>
+      <div className="w-full lg:col-span-3 lg:mt-8 grid  lg:grid-cols-3 md:grid-cols-2  gap-8 p-4 ms:p-0 ">
         {data.map((item) => (
           <div key={item.id} className="w-full">
             <div className="shadow-md rounded-xl border h-full">
@@ -86,10 +87,10 @@ const ShopPage = ({ data }) => {
                       {item.price}$
                     </p>
                   </div>
-                  <div className="w-full flex justify-center items-center text-yellow-600 text-base font-bold text-center ">
+                  <div className="w-full flex justify-center items-center text-base font-bold text-center ">
                     <Link
                       to={`/product-detail/${item.id}`}
-                      className="w-full border-2 py-2 border-yellow-600 hover:text-white hover:bg-yellow-600 rounded-b-xl"
+                      className="w-full py-2 border-yellow-600 text-white bg-yellow-600 hover:bg-yellow-700 rounded-b-xl"
                     >
                       Buy now
                     </Link>

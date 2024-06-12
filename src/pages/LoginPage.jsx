@@ -10,7 +10,6 @@ import { Link, useNavigate } from "react-router-dom";
 const schema = z.object({
   email: z.string().email(),
   password : z.string().min(6),
-  router: z.string().optional(),
 });
 
 function LoginPage() {
@@ -28,7 +27,7 @@ function LoginPage() {
               const result = await instance.post(`/login`, data);
               localStorage.setItem("user", JSON.stringify(result.data));
               if(confirm("Login successfully, do you want to return to the admin page?")){
-                nav("/admin");
+                nav("/about-user");
               }
             }catch(error){
               alert(error?.response?.data);
@@ -39,7 +38,7 @@ function LoginPage() {
   return (
     <>
     <section className="pt-16"></section>
-    <section className='container max-w-screen-sm m-auto pt-8 shadow-xl border rounded-xl'>
+    <section className='container max-w-screen-sm m-auto  shadow-xl border rounded-xl'>
      <form onSubmit={handleSubmit(onSubmit)} className="p-3">
         <h1 className="text-center text-[40px] font-bold text-yellow-600">Login</h1>
         <div className="w-full grid grid-cols-1">
@@ -52,11 +51,7 @@ function LoginPage() {
             <input className="outline-none py-2 pl-3 border"type="password" name="" id="password" {...register("password")} />
             {errors.password?.message && <p className="text-danger">{errors.password?.message}</p>}
         </div>
-        <div className="w-full grid grid-cols-1">
-            <label htmlFor="router"  className="my-2 text-xl font-semibold text-yellow-600 ">Router:</label>
-            <input className="outline-none py-2 pl-3 border"type="password" name="" id="router" {...register("router")} />
-            {errors.router?.message && <p className="text-danger">{errors.router?.message}</p>}
-        </div>
+        
         <div className="w-full my-3 bg-yellow-600 text-white font-semibold text-xl hover:bg-yellow-700">
             <button type="submit" className='w-full text-center py-3'>Login</button>
         </div>

@@ -183,44 +183,34 @@
   ],
   "users": [
     {
-      "id": 1,
-      "email": "tailoi08@gmail.com",
-      "password": "123456"
-    },
-    {
       "email": "tailoitran08@gmail.com",
       "password": "$2a$10$8mMHx35/Tvex60nn130SkOfGJ.qKUGxKC7kbNhXiC9vk.Faa6tQeK",
-      "id": 2
+      "id": 2,
+      "isAdmin": true
     },
     {
       "email": "Quangcover2k3az@gmail.com",
       "password": "$2a$10$XsXW3KFscqNQ7ID/c6pj6O6WTSR.G5M8qz2Az87KHkytg0EqTKqoG",
-      "id": 3
+      "id": 3,
+      "isAdmin": false
     },
     {
       "email": "loittph45949@fpt.edu.vn",
       "password": "$2a$10$kYYibyr0KrcALwnXEgnUtuillEUgNqyQ47RemM0GDDnn0/c3kN3gu",
-      "id": 4
+      "id": 4,
+      "isAdmin": false
     },
     {
       "email": "d@gmail.com",
       "password": "$2a$10$mgpOgsqFSHIp2TsFyTd9o.VzGZhv2U2NSVO38iVUcXXoGK80cgmoi",
-      "id": 5
+      "id": 5,
+      "isAdmin": false
     },
     {
       "email": "tran@gamil.com",
       "password": "$2a$10$n5WT8qNzYzn1.Qx4VIyp0.RoTE7CEalNGVh.hQeXOs1oywxG89DGi",
-      "id": 6
-    },
-    {
-      "email": "tran44@gamil.com",
-      "password": "$2a$10$0/zwGyuXRBEott/j62cxm.pe8esGZjtIA7n1izStPSN1ADmmwYMBq",
-      "id": 7
-    },
-    {
-      "email": "trantailoi@gmail.com",
-      "password": "$2a$10$PFAQJ/YGP6ek3Mnk1NAfoOX9ndt6JEDTmW9Q9jWG6mDI1eCqzqgfC",
-      "id": 8
+      "id": 6,
+      "isAdmin": false
     }
   ]
 }

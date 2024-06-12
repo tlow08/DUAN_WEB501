@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
-    <header className="lg:fixed w-full z-50 bg-white">
-      <section className="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
+    <header className=" lg:fixed w-full z-50 bg-white">
+      <section className=" xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
         <div className="grid lg:grid-cols-4 md:grid-cols-1 md:text-center gap-8 my-4">
           <Link to="/">
           <div className="flex justify-center items-center gap-2">
@@ -11,8 +12,8 @@ export default function Header() {
             <p className="text-xl font-semibold text-yellow-700">Low-Coffee</p>
           </div>
           </Link>
-          <div className="lg:col-span-2 flex  ">
-            <form action="" className="w-full flex justify-center">
+          <div className="container lg:col-span-2 flex  ">
+            <form action="" className="w-full flex justify-center items-center">
               <div className="w-5/6 border border-yellow-400">
                 <input
                   className="w-full px-[12px] py-[6px] outline-none"
@@ -28,7 +29,7 @@ export default function Header() {
             </form>
           </div>
           <div className="flex justify-center items-center gap-4 text-yellow-700 text-base font-semibold ">
-            <Link className="hover:underline" to="/login">
+            <Link className="hover:underline" to={user ? `/about-user` : "/login"}>
               <i className="bi bi-person-fill px-1"></i>Account
             </Link>
             <Link className="hover:underline" to="/cart">
@@ -75,7 +76,10 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="container grid lg:grid-cols-4 gap-8 text-xl font-semibold bg-yellow-600 text-white rounded">
+        
+      </section>
+     <section className="  bg-yellow-600">
+     <div className="w-full container xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto grid lg:grid-cols-4 gap-8 text-xl font-semibold  text-white rounded">
           <div className="text-center text-base py-3">
             <p>Welcome to Low-Coffee</p>
           </div>
@@ -101,15 +105,10 @@ export default function Header() {
                   About
                 </Link>
               </li>
-              <li>
-                <Link className="p-2 hover:underline" to="/admin">
-                  Admin
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
-      </section>
+     </section>
     </header>
   );
 }

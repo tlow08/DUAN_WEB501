@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="bg-yellow-600 text-white mt-16">
-      <section className="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-4  py-8 grid lg:grid-cols-3 md:grid-cols-1 gap-8">
+    <footer className="bg-yellow-600 text-white mt-16 ">
+      <section className="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm m-auto px-2 py-8 grid lg:grid-cols-3 md:grid-cols-1 sm:m-2 gap-8">
         <div>
           <div className="text-2xl flex gap-4">
             <i className="bi bi-cup-hot-fill text-xl"></i>
@@ -14,6 +14,15 @@ function Footer() {
         </div>
         <div>
           <h3 className="text-2xl font-semibold">Contact</h3>
+          <div className="text-base grid grid-cols-1 gap-2 mt-3">
+            <p>Overview Introduction</p>
+            <p>History</p>
+            <p>Mission and Values</p>
+            <p>Environmental Protection commitments</p>
+            <p>Environment</p>
+            <p>Products and services</p>
+            <p>Team</p>
+          </div>
         </div>
         <div>
           <h3 className="text-2xl font-semibold">Address</h3>

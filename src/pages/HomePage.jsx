@@ -4,39 +4,38 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <>
-      <section className=" lg:grid-cols-4 md:grid-cols-1 gap-8">
-        <div className="w-full hidden lg:block">
-          <ul className="w-full p-4  text-gray-400 ">
-            <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
-              <Link>Traditional coffee</Link>
-            </li>
-            <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
-              <Link>Vietnamese Coffee</Link>
-            </li>
-            <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
-              <Link>Instant coffee</Link>
-            </li>
-            <li className="py-3 text-xl font-semibold hover:text-yellow-700 border-b">
-              <Link>Canned coffee</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="slider col-span-3">
+      <section className="max-w-screen-2xl m-auto">
+        {/* <div className="col-span-1 w-full overflow-hidden hidden lg:block">
+          <img
+            className="h-full w-auto"
+            src="https://i.pinimg.com/736x/ab/90/a8/ab90a8b8a3f184d4a39357237cc75618.jpg"
+            alt=""
+          />
+        </div> */}
+        <div className="slider w-full">
           <div
-            id="carouselExampleFade"
-            className="carousel slide carousel-fade "
+            id="carouselExampleInterval"
+            className="carousel slide"
+            data-bs-ride="carousel"
           >
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item active" data-bs-interval="3000">
                 <img
                   src="https://minhanhcafe.vn/wp-content/uploads/2023/08/Banner-2-trai-nghiem.jpg"
                   className="d-block w-100"
                   alt="..."
                 />
               </div>
-              <div className="carousel-item">
+              <div className="carousel-item" data-bs-interval="3000">
                 <img
                   src="https://minhanhcafe.vn/wp-content/uploads/2023/08/Banner-2-truyen-thong.jpg"
+                  className="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://minhanhcafe.vn/wp-content/uploads/2023/08/Banner-2-cho-quan-1.jpg"
                   className="d-block w-100"
                   alt="..."
                 />
@@ -45,7 +44,7 @@ function HomePage() {
             <button
               className="carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExampleFade"
+              data-bs-target="#carouselExampleInterval"
               data-bs-slide="prev"
             >
               <span
@@ -57,7 +56,7 @@ function HomePage() {
             <button
               className="carousel-control-next"
               type="button"
-              data-bs-target="#carouselExampleFade"
+              data-bs-target="#carouselExampleInterval"
               data-bs-slide="next"
             >
               <span
@@ -69,7 +68,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className=" container lg:max-w-screen-lg grid lg:grid-cols-3 md:grid-cols-1 gap-8 mt-16 ">
+      <section className=" grid lg:grid-cols-3 md:grid-cols-1 gap-8 mt-16 ">
         <div className="grid grid-cols-3 justify-center items-center p-3 border rounded-lg shadow-md">
           <div>
             <img
@@ -82,8 +81,10 @@ function HomePage() {
               OUR MISSION
             </h1>
             <div className="text-base text-left text-gray-400">
-              <p>Bringing high quality cups of coffee with unique flavors</p>
-              <p>Use clean and safe ingredients for health</p>
+              <p>
+                Bringing high quality cups of coffee with unique flavors.Use
+                clean and safe ingredients for health
+              </p>
             </div>
           </div>
         </div>
@@ -99,8 +100,10 @@ function HomePage() {
               OUR VISION
             </h1>
             <div className="text-base text-left text-gray-400">
-              <p>Building a reputable and trustworthy coffee brand</p>
-              <p>Contribute to improving the culture of enjoying coffee</p>
+              <p>
+                Building a reputable and trustworthy coffee brand. Contribute to
+                improving the culture of enjoying coffee
+              </p>
             </div>
           </div>
         </div>
@@ -117,16 +120,18 @@ function HomePage() {
               OUR VALUES
             </h1>
             <div className="text-base text-left text-gray-400">
-              <p>Dedication: Serve customers with all your heart</p>
-              <p>Honesty: Always be transparent and honest in business</p>
+              <p>
+                Dedication: Serve customers with all your heart. Honesty: Always
+                be transparent and honest in business
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section className="mt-16">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-row flex-wrap">
           <h1 className="text-[40px] font-semibold text-yellow-600 ">
-            Bestseller
+            Best Seller
           </h1>
           <Link to="">
             <p className="text-yellow-600 text-xl font-semibold py-2 px-4 border border-yellow-600 hover:text-white hover:bg-yellow-600">
@@ -153,10 +158,10 @@ function HomePage() {
                   </h4>
                   <p className="text-red-500 text-xl font-bold my-2">45.000đ</p>
                 </div>
-                <div className="w-full flex justify-center items-center text-yellow-600 text-base font-bold text-center ">
+                <div className="w-full flex justify-center items-center  text-base font-bold text-center ">
                   <Link
                     to=""
-                    className=" w-full border-2 py-2 border-yellow-600 hover:text-white hover:bg-yellow-600 rounded-b-xl"
+                    className=" w-full py-2 text-white bg-yellow-600 hover:bg-yellow-700 rounded-b-xl"
                   >
                     Buy now
                   </Link>
@@ -182,10 +187,10 @@ function HomePage() {
                   </h4>
                   <p className="text-red-500 text-xl font-bold my-2">45.000đ</p>
                 </div>
-                <div className="w-full flex justify-center items-center text-yellow-600 text-base font-bold text-center ">
+                <div className="w-full flex justify-center items-center  text-base font-bold text-center ">
                   <Link
                     to=""
-                    className=" w-full border-2 py-2 border-yellow-600 hover:text-white hover:bg-yellow-600 rounded-b-xl"
+                    className=" w-full py-2 text-white bg-yellow-600 hover:bg-yellow-700 rounded-b-xl"
                   >
                     Buy now
                   </Link>
@@ -211,10 +216,10 @@ function HomePage() {
                   </h4>
                   <p className="text-red-500 text-xl font-bold my-2">45.000đ</p>
                 </div>
-                <div className="w-full flex justify-center items-center text-yellow-600 text-base font-bold text-center ">
+                <div className="w-full flex justify-center items-center  text-base font-bold text-center ">
                   <Link
                     to=""
-                    className=" w-full border-2 py-2 border-yellow-600 hover:text-white hover:bg-yellow-600 rounded-b-xl"
+                    className=" w-full py-2 text-white bg-yellow-600 hover:bg-yellow-700 rounded-b-xl"
                   >
                     Buy now
                   </Link>
@@ -240,10 +245,10 @@ function HomePage() {
                   </h4>
                   <p className="text-red-500 text-xl font-bold my-2">45.000đ</p>
                 </div>
-                <div className="w-full flex justify-center items-center text-yellow-600 text-base font-bold text-center ">
+                <div className="w-full flex justify-center items-center  text-base font-bold text-center ">
                   <Link
                     to=""
-                    className=" w-full border-2 py-2 border-yellow-600 hover:text-white hover:bg-yellow-600 rounded-b-xl"
+                    className=" w-full py-2 text-white bg-yellow-600 hover:bg-yellow-700 rounded-b-xl"
                   >
                     Buy now
                   </Link>
@@ -253,25 +258,53 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 mt-16">
-        <div>
-          <img
-            className="w-full"
-            src="https://vietthuancoffee.com/wp-content/uploads/2020/05/Cafe-banner-01-scaled.jpg"
-            alt=""
-          />
+      <section className=" mt-16">
+        <div className="flex justify-between flex-row flex-wrap">
+          <h1 className="text-[40px] font-semibold text-yellow-600">
+            Shop Space
+          </h1>
+          <Link to="">
+            <p className="text-yellow-600 text-xl font-semibold py-2 px-4 border border-yellow-600 hover:text-white hover:bg-yellow-600">
+              View all
+            </p>
+          </Link>
         </div>
-        <div>
-          <img
-            className="w-full"
-            src="https://vietthuancoffee.com/wp-content/uploads/2020/05/Cafe-banner-01-scaled.jpg"
-            alt=""
-          />
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 mt-8">
+          <div className="overflow-hidden">
+            <img
+              className="w-full hover:scale-125 transition-transform duration-1000"
+              src="https://www.noithatnewdecor.com/wp-content/uploads/2019/08/quan-cafe4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="overflow-hidden">
+            <img
+              className="w-full hover:scale-125 transition-transform duration-1000"
+              src="https://www.noithatnewdecor.com/wp-content/uploads/2019/08/quan-cafe4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="overflow-hidden">
+            <img
+              className="w-full hover:scale-125 transition-transform duration-1000"
+              src="https://www.noithatnewdecor.com/wp-content/uploads/2019/08/quan-cafe4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="overflow-hidden">
+            <img
+              className="w-full hover:scale-125 transition-transform duration-1000"
+              src="https://www.noithatnewdecor.com/wp-content/uploads/2019/08/quan-cafe4.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </section>
       <section className="mt-16">
-        <div className="flex justify-between">
-          <h1 className="text-[40px] font-semibold text-yellow-600">News</h1>
+        <div className="flex justify-between flex-row flex-wrap">
+          <h1 className="text-[40px] font-semibold text-yellow-600">
+            Blog and News
+          </h1>
           <Link to="">
             <p className="text-yellow-600 text-xl font-semibold py-2 px-4 border border-yellow-600 hover:text-white hover:bg-yellow-600">
               View all
@@ -342,9 +375,16 @@ function HomePage() {
         </div>
       </section>
       <section className="mt-16">
-        <div className="flex justify-between">
+        <img
+          className="w-full"
+          src="https://ttmvietnam.com.vn/agriculture/upload/images/coffee-banner.png"
+          alt=""
+        />
+      </section>
+      <section className="mt-16">
+        <div className="flex justify-between flex-row flex-wrap">
           <h1 className="text-[40px] font-semibold text-yellow-600">
-            Customer is feedback
+            What do customers say?
           </h1>
           <Link to="">
             <p className="text-yellow-600 text-xl font-semibold py-2 px-4 border border-yellow-600 hover:text-white hover:bg-yellow-600">

@@ -18,12 +18,14 @@ const ContactPage = () => {
     </section>
     <section className="container grid lg:grid-cols-2 md:grid-cols-1 mt-16 gap-8">
         <div className="text-2xl font-semibold text-yellow-600 pl-8">
-            <h2>Address</h2>
-            <div className="text-gray-500 font-semibold text-base py-3">
-            <p>-Hà Nội</p>
-            <p>-Nam Định</p>
+            <div>
+              <h2>Open time information</h2>
+              <div className="mt-4 text-xl font-bold text-red-700">
+               <p> - 9 am - 11 am</p>
+               <p> - 13pm - 22 pm</p>
+              </div>
             </div>
-            <h2>Email : DDD@gmail.com</h2>
+            <h2 className="py-4">Email : DDD@gmail.com</h2>
             <h2>Hotline : 1900 1900</h2>
         </div>
         <div className="p-2">

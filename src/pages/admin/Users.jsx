@@ -5,15 +5,16 @@ const Users = ({data}) => {
     // console.log(data);
   return (
    <>
-    <section className="pt-16"></section>
+
     <section>
-      <h1 className='text-2xl font-bold text-center'>List Of Users</h1>
-      <Link to="/admin" className='btn btn-warning my-8'>List of products</Link>
+    <h1 className="text-center font-bold text-2xl text-red-600 my-4">LIST OF User</h1>
       <table className='table table-striped'>
         <thead className='text-xl text-center'>
+          <tr>
           <th>Id</th>
           <th>Email</th>
           <th>Password</th>
+          </tr>
         </thead>
         <tbody>
           {data.map((item) =>(
