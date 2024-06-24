@@ -1,13 +1,26 @@
 // import React from "react";
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../contexts/ProductContext";
+import instance from "../../axios";
 
-function ListProduct({ data, removeProduct }) {
+function ListProduct() {
   // console.log(data);
-  if (!data || data.length === 0) {
-    return <div>No data available</div>;
+  // if (!data || data.length === 0) {
+  //   return <div>No data available</div>;
+  // }
+  const {state, dispatch} = useContext(ProductContext);
+  const handleDelete = async (id)=>{
+    try{
+      if(confirm("Are you sure?")){
+        await instance.delete(`/products/${id}`);
+        dispatch({type: "DELETE_PRODUCT", payload: id});
+      }
+    }catch(error){
+      console.log(error);
+    }
   }
-
   return (
     <>
     <section>
@@ -28,7 +41,7 @@ function ListProduct({ data, removeProduct }) {
           </tr>
         </thead>
         <tbody className="text-center">
-          {data.map((product) => (
+          {state.products.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
               <td>{product.title}</td>
@@ -38,7 +51,7 @@ function ListProduct({ data, removeProduct }) {
               </td>
               <td>
                 <Link className="btn btn-warning mx-4" to={`/admin/product-edit/${product.id}`}>Edit</Link>
-                <button className="btn btn-danger" onClick={() => removeProduct(product.id)}>Delete</button>
+                <button className="btn btn-danger" onClick={() => handleDelete(product.id)}>Delete</button>
               </td>
             </tr>
           ))}

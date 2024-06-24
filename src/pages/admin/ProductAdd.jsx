@@ -1,7 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useContext } from 'react';
 // import React from 'react'
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { z } from 'zod';
+import { ProductContext } from '../../contexts/ProductContext';
+import instance from '../../axios';
 
 const schemaProduct = z.object({
     title: z.string().min(3,{message: "Phải có ít nhất 3 ký tự"}),
@@ -10,7 +14,9 @@ const schemaProduct = z.object({
     thumbnail: z.string().optional(),
 });
 
-const ProductAdd = ({pAdd}) => {
+const ProductAdd = () => {
+    const nav = useNavigate();
+    const {dispatch} = useContext(ProductContext);
     const {
         register,
         handleSubmit,
@@ -19,8 +25,17 @@ const ProductAdd = ({pAdd}) => {
         resolver: zodResolver(schemaProduct),
     })
     const onSubmit = (data) =>{
-        // console.log("them");
-        pAdd(data);
+        (async ()=>{
+            try{
+                const res = await instance.post("/products", data);
+                dispatch({type: "ADD_PRODUCT", payload: res.data });
+                if(confirm("Successfully, redirect to admin page!")){
+                    nav("/admin/products");
+                }
+            }catch(error){
+                console.log(error);
+            }
+        })()
     }
   return (
    <>

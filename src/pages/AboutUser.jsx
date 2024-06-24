@@ -1,34 +1,36 @@
-import React, { useEffect, useState } from 'react'
+
+import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../contexts/AuthContext';
 
 const AboutUser = () => {
 
-  const [user, setUser] = useState(null);
   const nav = useNavigate();
-  useEffect(()=>{
-    const userData = JSON.parse(localStorage.getItem('user'));
-    // console.log(userData);
-    setUser(userData);
-  },[]);
-
+  const  {isAuthenticated, user, logout} = useContext(AuthContext);
   const handleLogout = ()=>{
     if(confirm("Bạn muốn đăng xuất?")){
-      localStorage.removeItem('user');
-      nav("/login");
+      logout();
+      nav("/");
     }
   }
 
 
   return (
     <section>
-     {user ? (
-       <div className='flex gap-3'>
-        <Link to="/admin" className='btn btn-warning'>Admin</Link>
-        <button onClick={handleLogout} className='btn btn-danger'>Logout</button>
-       </div>
-     ):(
-        <p>Loading...</p>
-     )}
+    {isAuthenticated ?(
+      <>
+      <p className='text-xl font-semibold my-8'>Welcome, {user?.email}</p>
+      {user?.role === 'admin' && <Link to="/admin/dashboard" className='btn btn-warning mr-4'>Admin page</Link>}
+      <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+
+      </>
+    ):(
+      <>
+      <p>Welcome, {user?.email}</p>
+      <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+      </>
+    )}
+  
     </section>
   )
 }

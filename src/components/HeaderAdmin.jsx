@@ -10,7 +10,7 @@ const HeaderAdmin = () => {
           <i className="bi bi-cup-hot-fill "></i>
           <p>Low-Coffee</p>
         </div>
-        <Link to="/">
+        <Link to="/about-user">
           {" "}
           <i className="bi bi-box-arrow-right pr-1"></i>Out
         </Link>

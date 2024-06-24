@@ -1,9 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import React, { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { z } from 'zod';
 import instance from '../../axios';
+import { ProductContext } from '../../contexts/ProductContext';
 
 const schemaProduct = z.object({
     title: z.string().min(3,{message: "Phải có ít nhất 3 ký tự"}),
@@ -12,7 +13,9 @@ const schemaProduct = z.object({
     thumbnail: z.string().optional(),
 });
 
-const ProductEdit = ({pEdit}) => {
+const ProductEdit = () => {
+    const nav = useNavigate();
+    const {dispatch} = useContext(ProductContext);
     const {id} = useParams();
     const {
         register,
@@ -23,14 +26,32 @@ const ProductEdit = ({pEdit}) => {
         resolver: zodResolver(schemaProduct),
     });
     useEffect(() =>{
-        (async ()=>{
-            const {data} = await instance.get(`/products/${id}`);
-            reset(data);
-        })();
-    },[]);
+    if(id){
+       
+            (async ()=>{
+               try{
+                const {data} = await instance.get(`/products/${id}`);
+                reset(data);
+               }catch(error){
+                console.log(error);
+               }
+            })();
+        }
+        },[id, reset]);
+   
+   
     const onSubmit = (data) =>{
-        // console.log("them");
-        pEdit({...data, id});
+        (async ()=>{
+            try{
+                const res = await instance.patch(`/products/${id}`, data);
+                dispatch({type: "EDIT_PRODUCT", payload : res.data});
+                if(confirm("Successfully, redirect to list products page!")){
+                    nav("/admin/products")
+                }
+            }catch(error){
+                console.log(error);
+            }
+        })()
     };
   return (
    <>

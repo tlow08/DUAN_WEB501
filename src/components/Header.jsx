@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
 
 export default function Header() {
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const user = JSON.parse(localStorage.getItem("user"));
+  const { isAuthenticated } = useContext(AuthContext);
+  const [searchTerm, setSearchTerm] = useState("");
+  const nav = useNavigate();
+
+  const handleSearch = (event) =>{
+    event.preventDefault();
+    if(searchTerm.trim() !== ""){
+      nav(`/shop?search=${searchTerm}`);
+    }
+  }
   return (
     <header className=" lg:fixed w-full z-50 bg-white">
       <section className=" xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md m-auto sm:p-2 ">
@@ -13,12 +25,14 @@ export default function Header() {
           </div>
           </Link>
           <div className="container lg:col-span-2 flex  ">
-            <form action="" className="w-full flex justify-center items-center">
+            <form onSubmit={handleSearch} className="w-full flex justify-center items-center">
               <div className="w-5/6 border border-yellow-400">
                 <input
                   className="w-full px-[12px] py-[6px] outline-none"
                   type="text"
+                  value={searchTerm}
                   placeholder="Enter search content ..."
+                  onChange = {(e) => setSearchTerm(e.target.value)}
                 />
               </div>
               <div className="w-1/6 text-left">
@@ -29,7 +43,8 @@ export default function Header() {
             </form>
           </div>
           <div className="flex justify-center items-center gap-4 text-yellow-700 text-base font-semibold ">
-            <Link className="hover:underline" to={user ? `/about-user` : "/login"}>
+            {/* {isAuthenticated ? <Link to="/admin/dashboard">You are admin?</Link> : <></>} */}
+            <Link className="hover:underline" to={isAuthenticated ? `/about-user` : "/register"}>
               <i className="bi bi-person-fill px-1"></i>Account
             </Link>
             <Link className="hover:underline" to="/cart">

@@ -1,13 +1,17 @@
 // import React from 'react'
-import { Link } from 'react-router-dom';
 
-const Users = ({data}) => {
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
+
+const Users = () => {
     // console.log(data);
+    const { state, dispatch} = useContext(UserContext);
+
   return (
    <>
 
     <section>
-    <h1 className="text-center font-bold text-2xl text-red-600 my-4">LIST OF User</h1>
+    <h1 className="text-center font-bold text-2xl text-red-600 my-4">LIST OF USER</h1>
       <table className='table table-striped'>
         <thead className='text-xl text-center'>
           <tr>
@@ -17,7 +21,7 @@ const Users = ({data}) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) =>(
+          {state.users.map((item) =>(
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.email}</td>

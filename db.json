@@ -2,14 +2,14 @@
   "products": [
     {
       "id": 1,
-      "title": "Coffe-01",
+      "title": "Coffee-01",
       "description": "An apple mobile which is nothing like apple",
       "price": 45000,
       "discountPercentage": 12.96,
       "rating": 4.69,
       "stock": 94,
       "brand": "Apple",
-      "category": "smartphones",
+      "category": "Traditional coffee",
       "thumbnail": "https://pos.nvncdn.com/a5850d-103492/art/artCT/20230115_M1QvMmlMjBmBbjtt.png",
       "images": [
         "https://cdn.dummyjson.com/product-images/1/1.jpg",
@@ -28,7 +28,7 @@
       "rating": 4.44,
       "stock": 34,
       "brand": "Apple",
-      "category": "smartphones",
+      "category": "Traditional coffee",
       "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2wLN6wjMJjwgqjfHGoqiOAJwu24BGL-q0INDltGZppNnFG4VDmLzuH8kaHyzN_EcJavU&usqp=CAU",
       "images": [
         "https://cdn.dummyjson.com/product-images/2/1.jpg",
@@ -45,8 +45,8 @@
       "discountPercentage": 15.46,
       "rating": 4.09,
       "stock": 36,
-      "brand": "Samsung",
-      "category": "smartphones",
+      "brand": "Vietnamese Coffee",
+      "category": "Traditional coffee",
       "thumbnail": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lr2i003nykrd4b_tn.webp",
       "images": [
         "https://cdn.dummyjson.com/product-images/3/1.jpg"
@@ -61,7 +61,7 @@
       "rating": 4.3,
       "stock": 123,
       "brand": "OPPO",
-      "category": "smartphones",
+      "category": "Vietnamese Coffee",
       "thumbnail": "https://dongsaigonplas.com/vnt_upload/news/20_07_2020/ky-giay-dung-cafe-2.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/4/1.jpg",
@@ -80,7 +80,7 @@
       "rating": 4.09,
       "stock": 32,
       "brand": "Huawei",
-      "category": "smartphones",
+      "category": "Vietnamese Coffee",
       "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGaDZT1_LA6AXilJ3aCHhtzfHz1hAIvDkETJqTbdr0uajHKWjrZjIdj-uHrkUB2TktbzY&usqp=CAU",
       "images": [
         "https://cdn.dummyjson.com/product-images/5/1.jpg",
@@ -97,7 +97,7 @@
       "rating": 4.57,
       "stock": 83,
       "brand": "Apple",
-      "category": "laptops",
+      "category": "Instant coffee",
       "thumbnail": "https://dongsaigonplas.com/vnt_upload/news/20_07_2020/ky-giay-dung-cafe-2.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/6/1.png",
@@ -108,14 +108,14 @@
     },
     {
       "id": 7,
-      "title": "Coffee-07",
+      "title": "Instant coffee",
       "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
       "price": 15000,
       "discountPercentage": 4.15,
       "rating": 4.25,
       "stock": 50,
       "brand": "Samsung",
-      "category": "laptops",
+      "category": "Canned coffee",
       "thumbnail": "https://lygiayvietnam.vn/uploads/blog/coc-giay-dung-1-lan-gia-bao-nhieu.png",
       "images": [
         "https://cdn.dummyjson.com/product-images/7/1.jpg",
@@ -133,7 +133,7 @@
       "rating": 4.43,
       "stock": 68,
       "brand": "Microsoft Surface",
-      "category": "laptops",
+      "category": "Canned coffee",
       "thumbnail": "https://dongsaigonplas.com/vnt_upload/news/20_07_2020/ky-giay-dung-cafe-2.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/8/1.jpg",
@@ -152,7 +152,7 @@
       "rating": 4.54,
       "stock": 96,
       "brand": "Infinix",
-      "category": "laptops",
+      "category": "Canned coffee",
       "thumbnail": "https://64.media.tumblr.com/9f16f50dfb01f4dcb4c69de87b53679c/d92d461a746bfab4-e1/s400x600/d6f1fa79cf4946da75fbb56d6ab495c316b015e5.png",
       "images": [
         "https://cdn.dummyjson.com/product-images/9/1.jpg",
@@ -171,7 +171,7 @@
       "rating": 4.43,
       "stock": 89,
       "brand": "HP Pavilion",
-      "category": "laptops",
+      "category": "Canned coffee",
       "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGaDZT1_LA6AXilJ3aCHhtzfHz1hAIvDkETJqTbdr0uajHKWjrZjIdj-uHrkUB2TktbzY&usqp=CAU",
       "images": [
         "https://cdn.dummyjson.com/product-images/10/1.jpg",
@@ -183,34 +183,20 @@
   ],
   "users": [
     {
-      "email": "tailoitran08@gmail.com",
-      "password": "$2a$10$8mMHx35/Tvex60nn130SkOfGJ.qKUGxKC7kbNhXiC9vk.Faa6tQeK",
-      "id": 2,
-      "isAdmin": true
-    },
-    {
-      "email": "Quangcover2k3az@gmail.com",
-      "password": "$2a$10$XsXW3KFscqNQ7ID/c6pj6O6WTSR.G5M8qz2Az87KHkytg0EqTKqoG",
-      "id": 3,
-      "isAdmin": false
-    },
-    {
       "email": "loittph45949@fpt.edu.vn",
-      "password": "$2a$10$kYYibyr0KrcALwnXEgnUtuillEUgNqyQ47RemM0GDDnn0/c3kN3gu",
-      "id": 4,
-      "isAdmin": false
+      "password": "$2a$10$lOyY3Dn1esbMPdV9MO/RYeUmpSsynj0wbZuJIMDUDLOedCZx1tLqu",
+      "id": 1,
+      "role": "admin"
     },
     {
-      "email": "d@gmail.com",
-      "password": "$2a$10$mgpOgsqFSHIp2TsFyTd9o.VzGZhv2U2NSVO38iVUcXXoGK80cgmoi",
-      "id": 5,
-      "isAdmin": false
+      "email": "tailoitran08@gmail.com",
+      "password": "$2a$10$wZdw59iFUaAYLy9/PQzEQ.glhM/bkR4dryw4bD.73hTGp1sI0tHtG",
+      "id": 2
     },
     {
-      "email": "tran@gamil.com",
-      "password": "$2a$10$n5WT8qNzYzn1.Qx4VIyp0.RoTE7CEalNGVh.hQeXOs1oywxG89DGi",
-      "id": 6,
-      "isAdmin": false
+      "email": "trantailoi@gmail.com",
+      "password": "$2a$10$8OeL7pHDjAbCPBkLgXLm/OakR4Y39a0EIuHVPy/jEh1HUD7TsTK7y",
+      "id": 3
     }
   ]
 }

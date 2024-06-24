@@ -3,6 +3,7 @@
 function AboutPage() {
   return (
     <>
+     
       <section className="grid lg:grid-cols-3 md:grid-cols-1 gap-8 mt-16">
         <div className="grid grid-cols-4 border p-2 gap-2 rounded-xl shadow-xl">
           <div className="col-span-1 flex justify-center items-center">
@@ -141,6 +142,7 @@ function AboutPage() {
           </p>
         </div>
       </section>
+     
     </>
   );
 }
