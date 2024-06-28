@@ -55,7 +55,6 @@ function App() {
           <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
-
             <Route path="products" element={<ListProduct />} />
             <Route path="users" element={<Users />} />
             <Route path="product-add" element={<ProductAdd />} />
