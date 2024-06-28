@@ -191,7 +191,8 @@
     {
       "email": "tailoitran08@gmail.com",
       "password": "$2a$10$wZdw59iFUaAYLy9/PQzEQ.glhM/bkR4dryw4bD.73hTGp1sI0tHtG",
-      "id": 2
+      "id": 2,
+      "role": "admin"
     },
     {
       "email": "trantailoi@gmail.com",

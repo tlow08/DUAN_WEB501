@@ -93,28 +93,23 @@ const ShopPage = () => {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/">
-                      Home
+                    <Link className="dropdown-item" to="/shop?category=Traditional coffee" >
+                    Traditional coffee
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/shop">
-                      Shop
+                    <Link className="dropdown-item" to="/shop?category=Vietnamese Coffee">
+                    Vietnamese Coffee
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/contact">
-                      Contact
+                    <Link className="dropdown-item" to="/shop?category=Instant coffee">
+                    Instant coffee
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/admin">
-                      Admin
+                    <Link className="dropdown-item" to="/shop?category=Canned coffee">
+                    Canned coffee
                     </Link>
                   </li>
                 </ul>
