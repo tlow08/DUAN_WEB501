@@ -6,7 +6,7 @@ import { AuthContext } from '../contexts/AuthContext';
 const AboutUser = () => {
 
   const nav = useNavigate();
-  const  {isAuthenticated, user, logout} = useContext(AuthContext);
+  const  {isAuthenticated, user, logout, loading} = useContext(AuthContext);
   const handleLogout = ()=>{
     if(confirm("Bạn muốn đăng xuất?")){
       logout();
@@ -14,7 +14,9 @@ const AboutUser = () => {
     }
   }
 
-
+  if(loading){
+    return <div>Loading...</div>
+  }
   return (
     <section>
     {isAuthenticated ?(
@@ -26,8 +28,9 @@ const AboutUser = () => {
       </>
     ):(
       <>
-      <p>Welcome, {user?.email}</p>
-      <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+      <p>Pleas</p>
+      {/* <p>Welcome, {user?.email}</p> */}
+      {/* <button className='btn btn-danger' onClick={handleLogout}>Logout</button> */}
       </>
     )}
   

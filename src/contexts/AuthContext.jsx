@@ -13,15 +13,6 @@ const AuthContextProvider = ({ children }) => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          /*
-                    Dung cach nay khi da co api/endpoint de kiem tra token
-                    const {data} = await instance.get("/me",{
-                    headers:{
-                        Authorization : `Bearer ${token}`,
-                    },
-                    });
-                    */
-          //    Dung cach nay khi chua co api/endpoint de kiem tr token
           const { data } = await instance.get("/users", {
             headers: {
               Authorization: `Bearer ${token}`,
